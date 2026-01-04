@@ -1,70 +1,108 @@
-# Getting Started with Create React App
+# React To‑Do List ✅
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**A simple, beginner-friendly To‑Do list app built with React and React Router.**
 
-## Available Scripts
+This project demonstrates a small single-page app with a mock authentication flow and a simple task manager where you can add, edit, and delete tasks.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Add** new tasks
+- **Edit** existing tasks
+- **Delete** tasks
+- Simple **Login / Register** navigation (mocked — client-side only)
+- Clean, minimal UI using plain CSS
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🧰 Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React (Create React App)
+- React Router DOM
+- JavaScript (ES6+)
+- CSS
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ▶️ Quick Start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Node.js >= 14
+- npm (bundled with Node)
 
-### `npm run eject`
+### Install & Run
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+# install dependencies
+npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# start dev server
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Open http://localhost:3000 in your browser.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Build
 
-## Learn More
+```bash
+npm run build
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📁 Project Structure
 
-### Code Splitting
+```
+Todo-list/
+├─ public/
+├─ src/
+│  ├─ auth/
+│  │  └─ auth.js        # (currently empty — place for auth helpers)
+│  ├─ components/
+│  │  ├─ Login.js       # mock login page (navigates to /todo)
+│  │  ├─ Register.js    # mock register page
+│  │  └─ Todo.js        # main todo component (add/edit/delete tasks)
+│  ├─ App.js            # routes
+│  └─ index.js
+└─ package.json
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 📝 Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Visit `/register` or `/login` to see the mock auth screens.
+2. After clicking **Login** you are navigated to `/todo`.
+3. Use the input to **Add** tasks. Click **Edit** to modify and **Delete** to remove.
 
-### Making a Progressive Web App
+> **Note:** Tasks are stored only in component state (in-memory). Reloading the page clears all tasks.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 💡 Development Notes & Suggestions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Persist tasks to `localStorage` or a backend API to keep them between sessions
+- Implement real authentication (JWT/session) and protect the `/todo` route
+- Add unit / integration tests (React Testing Library + Jest)
+- Improve accessibility and add keyboard support
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🤝 Contributing
 
-### `npm run build` fails to minify
+Contributions are welcome — open an issue or submit a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## 📜 License
+
+This project is provided under the **MIT License**.
+
+---
+
+**Happy coding!** ✨
+
+If you want, I can also add a short contribution guide, badges, or link a live demo.
+(https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
